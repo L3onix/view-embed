@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #bbedfb, #039be5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-font-smothing: antialiased !important;
+}
+
+body, button {
+  font-family: 'Pacifico';
+  font-size: 50px;
+}
+
+input {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.content form input {
+  margin-top: 45vh;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  height: 45px;
+  width: 750px;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.content button.btn {
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0 20px;
+  font-size: 50px;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content button.btn:hover {
+  background: #087f23;
+}
