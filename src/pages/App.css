@@ -62,3 +62,17 @@ input {
 .content button.btn:hover {
   background: #087f23;
 }
+
+#about {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer; 
+}
+
+#about:hover {
+  width: 35px;
+  height: 35px;
+}

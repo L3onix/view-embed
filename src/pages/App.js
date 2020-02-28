@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 
+import about from '../images/about.svg'
+
 function App() {
   const [link, setLink] = useState('')
 
@@ -26,6 +28,7 @@ function App() {
   }
 
   return (
+    <>
     <div className="content">
       <form onSubmit={handleSubmit}>
         <input
@@ -38,6 +41,8 @@ function App() {
         <button className="btn" type="submit">View embed!</button>
       </form>
     </div>
+    <img id="about" src={about} alt="About this project"/>
+    </>
   );
 }
 
