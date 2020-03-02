@@ -1,28 +1,17 @@
 import React, { useState } from 'react';
 import './App.css';
 
+import UrlFactory from '../middlewares/UrlFactory'
+
 import about from '../images/about.svg'
 
 function App() {
   const [link, setLink] = useState('')
 
-  function verifyUrlAndReturnNewUrl(link) {
-    // se for um link do youtube
-    if(link.includes('youtube')){
-      return 'https://youtube.com/embed/' + link.split('v=')[1]
-    }else if(link.includes('twitch')){
-      return 'https://player.twitch.tv/?channel=' + link.split('.tv/')[1]
-    }
-    
-    //return link.split('v=')[1]
-  }
-
   function handleSubmit(event) {
     event.preventDefault()
 
-    console.log(verifyUrlAndReturnNewUrl(link))
-
-    const newLink = verifyUrlAndReturnNewUrl(link)
+    const newLink = new UrlFactory(link).verifyUrlAndReturnNewUrl()
 
     window.open(newLink, 'sharer', 'toolbar=0,status=0,width=600,height=338');
   }
