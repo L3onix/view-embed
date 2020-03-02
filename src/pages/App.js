@@ -3,10 +3,13 @@ import './App.css';
 
 import UrlFactory from '../middlewares/UrlFactory'
 
+import AboutModal from '../components/AboutModal'
+
 import about from '../images/about.svg'
 
 function App() {
   const [link, setLink] = useState('')
+  const [aboutModal, setAboutModal] = useState(false)
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -29,8 +32,9 @@ function App() {
 
         <button className="btn" type="submit">View embed!</button>
       </form>
+    <img id="about" src={about} alt="About this project" onClick={event => setAboutModal(true)}/>
+    <AboutModal show={aboutModal} />
     </div>
-    <img id="about" src={about} alt="About this project"/>
     </>
   );
 }
