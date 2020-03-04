@@ -5,8 +5,8 @@ import github from '../images/github.svg'
 import exit from '../images/exit.svg'
 
 export default class AboutModal extends React.Component {
-    onClose = e => {
-        this.props.show = false
+    onClose = event => {
+        this.props.onClose && this.props.onClose(event)
     }
 
     render() {
@@ -16,7 +16,7 @@ export default class AboutModal extends React.Component {
         return (
             <div className="about-popup">
                 <div className="about-content">
-                    <img src={exit} alt="fechar popup about" id="exit" onClose={e => {this.onClose(e)}} />
+                    <img src={exit} alt="fechar popup about" id="exit" onClick={this.onClose} />
                     <span className="app-name">View Embed</span>
                     <p></p>
                     <a href="https://github.com/L3onix/view-embed" className="github"><img src={github} alt="logotipo do github" /></a>
