@@ -57,6 +57,7 @@ input {
   background: #4caf50;
   color: #fff;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .content button.btn:hover {
@@ -70,9 +71,84 @@ input {
   bottom: 10px;
   right: 10px;
   cursor: pointer; 
+  transition: 0.3s;
 }
 
 #about:hover {
   width: 35px;
   height: 35px;
 }
+
+.about-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.about-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: justify;
+  margin-top: 200px;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  background-color: rgba(255,255,255,0.85);
+  border-radius: 7px;
+  padding: 7px;
+}
+
+#exit {
+  float: right;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: 1.0s;
+}
+
+#exit:hover {
+  transform: rotate(360deg);
+}
+
+.about-content .app-name {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.about-content a {
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.about-content .github img {
+  width: 35px;
+  height: 35px;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+
