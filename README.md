@@ -19,4 +19,4 @@ Este pequeno projeto tem como objetivo criar, a partir de um link, uma pequena j
 Após isso basta acessar o endereço http://localhost:3000 no seu navegador de internet.
 
 ## Contribuindo
-De uma olhada nas [issues](https://github.com/L3onix/view-embed/issues). Caso tenha alguma sujestão de contribuição basta criar uma nova issue.
+De uma olhada nas [issues](https://github.com/L3onix/view-embed/issues). Caso tenha alguma sujestão de contribuição basta criar uma [nova issue](https://github.com/L3onix/view-embed/issues/new).
