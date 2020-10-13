@@ -16,7 +16,9 @@ class UrlFactory {
     verifyUrlAndReturnNewUrl(){
         if(this.link.includes('youtube')){
             return 'https://youtube.com/embed/' + this.link.split('v=')[1]
-        }else if(this.link.includes('twitch')){
+        }else if(this.link.includes('youtu.be')){
+            return `https://www.youtube.com/watch?v=${this.link.split('/')[1]}&feature=youtu.be`;
+        } else if(this.link.includes('twitch')){
             return this.createTwitchUrl(this.link.split('.tv/')[1])
         }
     }
